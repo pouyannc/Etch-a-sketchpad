@@ -15,4 +15,6 @@ div {
 .grid {
     box-sizing: border-box;
     border: 1px solid black;
+    transition: background-color .3s;
 }
+

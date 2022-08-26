@@ -5,7 +5,6 @@ const gridContainerWidth = gridContainer.clientWidth;
 let boxesPerRow = 16;
 let boxesTotal = boxesPerRow ** 2;
 let boxWidth = parseFloat (gridContainerWidth) / boxesPerRow + "px";
-console.log(boxWidth);
 
 for (let i = 0; i < boxesTotal; i++) {
     const box = document.createElement("div");
@@ -13,5 +12,7 @@ for (let i = 0; i < boxesTotal; i++) {
     box.style.width = boxWidth;
     box.style.height = boxWidth;
     gridContainer.appendChild(box);
-    console.log(boxWidth);
 }
+
+const grid = document.querySelectorAll(".grid");
+grid.forEach(b => b.addEventListener("mouseover", function() {b.style.background = "black";} ));
