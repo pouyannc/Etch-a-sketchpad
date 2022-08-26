@@ -2,3 +2,17 @@ div {
     font-size: 20px;
     text-align: center;
 }
+
+.gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 800px;
+    height: 800px;
+    border: 1px solid black;
+}
+
+.grid {
+    box-sizing: border-box;
+    border: 1px solid black;
+}
