@@ -21,6 +21,7 @@ function createGrid () {
 const gridContainer = document.querySelector(".gridContainer");
 const gridContainerWidth = gridContainer.clientWidth;
 const gridSizeButton = document.querySelector(".gridSize");
+const clearButton = document.querySelector(".clearGrid");
 
 let boxesPerRow = 16;
 let boxesTotal = boxesPerRow ** 2;
@@ -32,6 +33,9 @@ gridSizeButton.addEventListener("click", function (){
     boxWidth = parseFloat (gridContainerWidth) / boxesPerRow + "px";
     createGrid();
 });
+
+clearButton.addEventListener("click", createGrid);
+
 
 createGrid();
 
