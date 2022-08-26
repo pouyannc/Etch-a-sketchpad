@@ -9,12 +9,12 @@ div {
     box-sizing: border-box;
     width: 800px;
     height: 800px;
-    border: 1px solid black;
+    border: 1px solid gray;
 }
 
 .grid {
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid gray;
     transition: background-color .3s;
 }
 
