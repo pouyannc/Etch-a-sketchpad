@@ -26,6 +26,11 @@ function fillGrid () {
     } )
 }
 
+function setColor (button) {
+    drawColor = button.classList;
+    colorButtons.forEach(b => b.style.padding = "17px");
+    button.style.padding = "22px";
+}
 
 const gridContainer = document.querySelector(".grid");
 const gridContainerWidth = gridContainer.clientWidth;
@@ -33,23 +38,15 @@ const gridSizeButton = document.querySelector(".gridSize");
 const clearButton = document.querySelector(".clearGrid");
 const fillButton = document.querySelector(".fill");
 
-
 let grid;
 let boxesPerRow = 16;
 let boxesTotal = boxesPerRow ** 2;
 let boxWidth = parseFloat (gridContainerWidth) / boxesPerRow + "px";
 let drawColor = "black";
+document.querySelector(".black").style.padding = "22px";
 
-document.querySelector(".red").addEventListener("click", () => drawColor = "red");
-document.querySelector(".black").addEventListener("click", () => drawColor = "black");
-document.querySelector(".blue").addEventListener("click", () => drawColor = "blue");
-document.querySelector(".yellow").addEventListener("click", () => drawColor = "yellow");
-document.querySelector(".orange").addEventListener("click", () => drawColor = "orange");
-document.querySelector(".green").addEventListener("click", () => drawColor = "green");
-document.querySelector(".purple").addEventListener("click", () => drawColor = "purple");
-document.querySelector(".brown").addEventListener("click", () => drawColor = "rgb(85, 48, 1)");
-document.querySelector(".pink").addEventListener("click", () => drawColor = "pink");
-document.querySelector(".white").addEventListener("click", () => drawColor = "white");
+const colorButtons = document.querySelectorAll(".colorButtons > button");
+colorButtons.forEach(b => b.addEventListener("click", () => setColor(b)));
 
 gridSizeButton.addEventListener("click", function (){
     boxesPerRow = prompt("Enter squares per side:");
@@ -60,7 +57,6 @@ gridSizeButton.addEventListener("click", function (){
 fillButton.addEventListener("click", fillGrid);
 
 clearButton.addEventListener("click", grid = createGrid);
-
 
 grid = createGrid();
 

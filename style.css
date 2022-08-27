@@ -10,7 +10,8 @@ button {
 }
 
 .colorButtons button {
-    padding: 20px;
+    padding: 17px;
+    border-radius: 10px;
 }
 
 .gridContainer {
