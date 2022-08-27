@@ -28,10 +28,10 @@ function fillGrid () {
 
 function switchGridLines() {
     if (gridLineButton.textContent == "Disable Grid Lines") {
-        grid.forEach(b => b.style.borderColor = "white");
+        grid.forEach(b => b.style.borderWidth = "0px");
         gridLineButton.textContent = "Enable Grid Lines";
     } else if (gridLineButton.textContent == "Enable Grid Lines") {
-        grid.forEach(b => b.style.borderColor = "rgba(158, 156, 156, 0.493)");
+        grid.forEach(b => b.style.borderWidth = "1px");
         gridLineButton.textContent = "Disable Grid Lines";
     }
   
