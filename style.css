@@ -1,20 +1,35 @@
 div {
-    font-size: 20px;
+    font-size: 40px;
     text-align: center;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.colorButtons button {
+    padding: 20px;
 }
 
 .gridContainer {
     display: flex;
+    justify-content: center;
+}
+
+.grid {
+    display: flex;
     flex-wrap: wrap;
-    box-sizing: border-box;
+    box-sizing: border-box; 
     width: 800px;
     height: 800px;
     border: 1px solid gray;
 }
 
-.grid {
+.box {
     box-sizing: border-box;
-    border: 1px solid gray;
-    transition: background-color .3s;
+    border: 1px solid rgba(158, 156, 156, 0.493);
+    transition: background-color .2s;
 }
 
