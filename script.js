@@ -26,6 +26,17 @@ function fillGrid () {
     } )
 }
 
+function switchGridLines() {
+    if (gridLineButton.textContent == "Disable Grid Lines") {
+        grid.forEach(b => b.style.borderColor = "white");
+        gridLineButton.textContent = "Enable Grid Lines";
+    } else if (gridLineButton.textContent == "Enable Grid Lines") {
+        grid.forEach(b => b.style.borderColor = "rgba(158, 156, 156, 0.493)");
+        gridLineButton.textContent = "Disable Grid Lines";
+    }
+  
+}
+
 function setColor (button) {
     drawColor = button.classList;
     colorButtons.forEach(b => b.style.padding = "17px");
@@ -37,6 +48,7 @@ const gridContainerWidth = gridContainer.clientWidth;
 const gridSizeButton = document.querySelector(".gridSize");
 const clearButton = document.querySelector(".clearGrid");
 const fillButton = document.querySelector(".fill");
+const gridLineButton = document.querySelector(".gridLines");
 
 let grid;
 let boxesPerRow = 16;
@@ -54,8 +66,8 @@ gridSizeButton.addEventListener("click", function (){
     grid = createGrid();
 });
 
+gridLineButton.addEventListener("click", switchGridLines);
 fillButton.addEventListener("click", fillGrid);
-
 clearButton.addEventListener("click", grid = createGrid);
 
 grid = createGrid();
