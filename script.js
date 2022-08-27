@@ -23,10 +23,16 @@ const gridContainerWidth = gridContainer.clientWidth;
 const gridSizeButton = document.querySelector(".gridSize");
 const clearButton = document.querySelector(".clearGrid");
 
+
+
 let boxesPerRow = 16;
 let boxesTotal = boxesPerRow ** 2;
 let boxWidth = parseFloat (gridContainerWidth) / boxesPerRow + "px";
 let drawColor = "black";
+
+document.querySelector(".red").addEventListener("click", () => drawColor = "red");
+document.querySelector(".black").addEventListener("click", () => drawColor = "black");
+document.querySelector(".blue").addEventListener("click", () => drawColor = "blue");
 
 gridSizeButton.addEventListener("click", function (){
     boxesPerRow = prompt("Enter squares per side:");
