@@ -68,7 +68,7 @@ gridSizeButton.addEventListener("click", function (){
 
 gridLineButton.addEventListener("click", switchGridLines);
 fillButton.addEventListener("click", fillGrid);
-clearButton.addEventListener("click", grid = createGrid);
+clearButton.addEventListener("click", () => grid=createGrid());
 
 grid = createGrid();
 
