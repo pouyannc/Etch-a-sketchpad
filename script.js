@@ -16,6 +16,9 @@ function createGrid () {
     grid.forEach(b => b.addEventListener("mouseover", function() {
         b.style.background = drawColor; 
         b.style.borderColor = drawColor;} ));
+    if (gridLineButton.textContent == "Enable Grid Lines") { //maintain no grid lines if they are disabled
+        grid.forEach(b => b.style.borderWidth = "0px");
+    }
     return grid;
 }
 
